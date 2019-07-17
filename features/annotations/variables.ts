@@ -20,7 +20,7 @@ let truths: boolean[] = [true, true, false];
 // Classes
 class Car {
 };
-lat car: Car = new Car();
+let car: Car = new Car();
 
 // Object literal
 let point: { x:number; y: number } = {
@@ -29,6 +29,12 @@ let point: { x:number; y: number } = {
 };
 
 // Function
-const logNumber = (i: number) => {
-  console.log(i)
+const logNumber: (i: number) => void = (i: number) => {
+  console.log(i);
 }
+
+// When to use annotations
+// 1) Function which returns 'any' type
+const json = '{"x": 10, "y": 20}';
+const coordinates = JSON.parse(json);
+console.log(coordinates);
