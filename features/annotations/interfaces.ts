@@ -23,3 +23,15 @@ const printVehicle = (vehicle: Vehicle): void => {
 };
 
 printVehicle(oldCivic);
+
+// Video 40
+interface Reportable {
+  summary(): string;
+}
+
+// const reportVehicle = (vehicle: Reportable): void => {
+const printSummary = (item: Reportable): void => {
+  console.log(item.summary());
+};
+
+printSummary(oldCivic);
