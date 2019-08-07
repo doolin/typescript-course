@@ -1,16 +1,20 @@
 class Vehicle {
-  drive(): void {
+  private drive(): void {
     console.log('driving');
   }
 
-  honk(): void {
+  public honk(): void {
     console.log('honking');
   }
 }
 
 class Car extends Vehicle {
-   drive(): void {
+   private drive(): void {
      console.log('car driving');
+   }
+
+   startDrivingProcess(): void {
+     this.drive();
    }
 }
 
@@ -19,5 +23,5 @@ vehicle.drive();
 vehicle.honk();
 
 const car = new Car();
-car.drive();
+car.startDrivingProcess();
 car.honk();
