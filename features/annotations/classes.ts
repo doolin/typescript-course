@@ -18,6 +18,11 @@ class Vehicle {
 }
 
 class Car extends Vehicle {
+
+  constructor (public wheels: number, color: string) {
+    super(color);
+  }
+
    //private drive(): void {
    //  console.log('car driving');
    //}
@@ -32,6 +37,6 @@ const vehicle = new Vehicle('orange');
 console.log(vehicle.color);
 vehicle.honk();
 
-//const car = new Car();
-//car.startDrivingProcess();
-//car.honk();
+const car = new Car(3, 'red');
+car.startDrivingProcess();
+car.honk();
