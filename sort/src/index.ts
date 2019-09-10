@@ -1,9 +1,13 @@
 // compile with tsc index.ts
 // can run with tsc -w
-console.log("gratuitous change");
+class Sorter {
+  constructor(public collection: number[]) {}
 
-const logSomething = () => {
-  console.log('someting');
-};
+  sort(): void {
 
-logSomething();
+  }
+}
+
+const sorter = new Sorter([1, 2, 3, 4]);
+sorter.sort();
+console.log(sorter.collection);
