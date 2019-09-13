@@ -7,6 +7,7 @@ class Sorter {
     const { length } = this.collection;
 
     // if collection is an array of numbers
+    if (this.collection instanceof Array) {
     for (let i = 0; i < length; i++) {
       for (let j = 0; j < length - i - 1; j++) {
         if (this.collection[j] > this.collection[j+1]) {
@@ -16,7 +17,7 @@ class Sorter {
         }
       }
     }
-
+  }
     // if collection is a string
     // need logic for comparing and swapping characters
   }
