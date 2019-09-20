@@ -1,4 +1,8 @@
 import { NumbersCollection } from './NumbersCollection';
+ 
+interface Sortable {
+
+}
 
 export class Sorter {
   constructor(public collection: NumbersCollection) {}
