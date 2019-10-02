@@ -64,4 +64,13 @@ export class LinkedList {
 
     return this.at(left).data > this.at(right).data; 
   }
+
+  swap(left: number, right: number): void {
+    const leftNode = this.at(left);
+    const rightNode = this.at(right);
+
+    const leftHand = leftNode.data;
+    leftNode.data = rightNode.data;
+    rightNode.data = leftHand;
+  }
 }
