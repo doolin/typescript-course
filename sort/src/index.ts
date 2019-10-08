@@ -6,13 +6,11 @@ import { CharactersCollection } from './CharactersCollection';
 import { LinkedList } from './LinkedList';
 
 const numbersCollection = new NumbersCollection([1,5,3,6,]);
-const sorter = new Sorter(numbersCollection);
-sorter.sort();
+numbersCollection.sort();
 console.log(numbersCollection.data);
 
 const charactersCollection = new CharactersCollection('gsgsdb');
-const sorter2 = new Sorter(charactersCollection);
-sorter2.sort();
+charactersCollection.sort();
 console.log(charactersCollection.data);
 
 const linkedlist = new LinkedList();
