@@ -12,13 +12,12 @@ console.log(numbersCollection.data);
 const charactersCollection = new CharactersCollection('gsgsdb');
 charactersCollection.sort();
 console.log(charactersCollection.data);
-
+ 
 const linkedlist = new LinkedList();
 linkedlist.add(500);
 linkedlist.add(-10);
 linkedlist.add(-3);
 linkedlist.add(4);
 
-const sorter3 = new Sorter(linkedlist);
-sorter3.sort();
+linkedlist.sort();
 linkedlist.print();
