@@ -8,11 +8,19 @@ const matches = fs.readFileSync('football.csv', {
 
 console.log(matches);
 
-const  MatchResult = {
-  HomeWin: 'H',
-  AwayWin: 'A',
-  Draw: 'D'
+enum MatchResult {
+  HomeWin = 'H',
+  AwayWin = 'A',
+  Draw = 'D'
 };
+
+// const printMatchResult = (): MatchResult => {
+//   if (match[5] === 'H') {
+//     return MatchResult.HomeWin;
+//   }
+
+//   return MatchResult.AwayWin;
+// }
 
 let manUnitedWins:number = 0;
 for (let match of matches) {
