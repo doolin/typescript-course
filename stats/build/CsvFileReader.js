@@ -16,6 +16,8 @@ var CsvFileReader = /** @class */ (function () {
         }).split('\n').map(function (row) {
             return row.split(',');
         })
+            //.map((row: string[]): (Date | number | string | MatchResult)[] => {
+            // .map((row: string[]): any => {
             .map(function (row) {
             return [
                 utitl_1.dateStringToDate(row[0]),
