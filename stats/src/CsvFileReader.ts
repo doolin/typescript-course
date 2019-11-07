@@ -18,8 +18,11 @@ export class CsvFileReader {
     })
     //.map((row: string[]): (Date | number | string | MatchResult)[] => {
     // .map((row: string[]): any => {
-    .map((row: string[]): MatchData => {
-      return [
+    .map((this.mapRow);
+  }
+
+  mapRow(row: string[]): MatchData {
+    return [
       dateStringToDate(row[0]),
       row[1],
       row[2],
@@ -27,8 +30,6 @@ export class CsvFileReader {
       parseInt(row[4]),
       row[5] as MatchResult,
       row[6]
-      ];
-    });
-    
+    ];
   }
 }
