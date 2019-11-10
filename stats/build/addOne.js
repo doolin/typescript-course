@@ -26,6 +26,9 @@ HoldString.data = 'foo';
 var HoldAnything = /** @class */ (function () {
     function HoldAnything() {
     }
+    HoldAnything.prototype.add = function (a) {
+        return a;
+    };
     return HoldAnything;
 }());
 var holdNumber1 = new HoldAnything();

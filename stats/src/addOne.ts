@@ -27,8 +27,12 @@ class HoldString {
 holdString = new HoldString();
 HoldString.data = 'foo';
 
-class HoldAnything<TypeOfData> {
-  data: TypeOfData;
+class HoldAnything<T> {
+  data: T;
+
+  add(a: T): T {
+    return a;
+  }
 }
 
 const holdNumber1 = new HoldAnything<number>();
