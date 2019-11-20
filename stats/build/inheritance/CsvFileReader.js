@@ -17,7 +17,7 @@ var CsvFileReader = /** @class */ (function () {
         })
             //.map((row: string[]): (Date | number | string | MatchResult)[] => {
             // .map((row: string[]): any => {
-            .map((this.mapRow));
+            .map(this.mapRow);
     };
     return CsvFileReader;
 }());

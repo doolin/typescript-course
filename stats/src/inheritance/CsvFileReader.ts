@@ -15,6 +15,6 @@ export abstract class CsvFileReader<T> {
     })
     //.map((row: string[]): (Date | number | string | MatchResult)[] => {
     // .map((row: string[]): any => {
-    .map((this.mapRow);
+    .map(this.mapRow);
   }
 }
