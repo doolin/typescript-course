@@ -22,4 +22,7 @@ const summary = new Summary(
   new HtmlReport()
 );
 
+const summary2 = Summary.winsAnalysisWithHtmlReport('Man United');
+
 summary.buildAndPrintReport(matchReader.matches);
+summary2.buildAndPrintReport(matchReader.matches);

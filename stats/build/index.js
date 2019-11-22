@@ -15,4 +15,6 @@ matchReader.load();
 var summary = new Summary_1.Summary(new WinsAnalysis_1.WinsAnalysis('Man United'), 
 //new ConsoleReport()
 new HtmlReport_1.HtmlReport());
+var summary2 = Summary_1.Summary.winsAnalysisWithHtmlReport('Man United');
 summary.buildAndPrintReport(matchReader.matches);
+summary2.buildAndPrintReport(matchReader.matches);
