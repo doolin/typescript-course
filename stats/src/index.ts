@@ -8,9 +8,9 @@ import { Summary } from './Summary';
 
 // const reader = new MatchReader('football.csv');
 // reader.read();
-
-const csvFileReader = new CsvFileReader('football.csv');
-const matchReader = new MatchReader(csvFileReader);
+// const csvFileReader = new CsvFileReader('football.csv');
+// const matchReader = new MatchReader(csvFileReader);
+const matchReader = MatchReader.fromCsv('football.csv');
 matchReader.load();
 
 // console.log(matchReader.matches);

@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var MatchReader_1 = require("./MatchReader");
-var CsvFileReader_1 = require("./CsvFileReader");
 var HtmlReport_1 = require("./reportTargets/HtmlReport");
 var WinsAnalysis_1 = require("./analyzers/WinsAnalysis");
 var Summary_1 = require("./Summary");
 // const reader = new MatchReader('football.csv');
 // reader.read();
-var csvFileReader = new CsvFileReader_1.CsvFileReader('football.csv');
-var matchReader = new MatchReader_1.MatchReader(csvFileReader);
+// const csvFileReader = new CsvFileReader('football.csv');
+// const matchReader = new MatchReader(csvFileReader);
+var matchReader = MatchReader_1.MatchReader.fromCsv('football.csv');
 matchReader.load();
 // console.log(matchReader.matches);
 // console.log(`Man United won ${manUnitedWins} games`)
