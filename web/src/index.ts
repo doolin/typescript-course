@@ -1,23 +1,8 @@
-// console.log("Hi there!");
-import { User } from './models/User';
+import axios from 'axios';
 
-const user = new User({ name: 'foo', age: 20 });
-
-user.set({ name: 'foobarski' });
-user.set({ age: 21 });
-
-console.log(user.get('name'));
-console.log(user.get('age'));
-
-user.on('change', () => {
-  console.log("change #1");
-});
-user.on('change', () => {
-  console.log("change #2");
-});
-user.on('no-change', () => {
-  console.log("no change");
+axios.post('http://localhost:3000/users', {
+  name: 'name',
+  age: '99'
 });
 
-console.log(user);
-user.trigger('change');
+axios.post('http://localhost:3000/users/1');
