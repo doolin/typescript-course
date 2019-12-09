@@ -55,7 +55,7 @@ export class User {
     if (id) {
       axios.put(`http://localhost:3000/users/${id}`, this.data);
     } else {
-      axios.put('http://localhost:3000/users/', this.data);
+      axios.post('http://localhost:3000/users/', this.data);
     }
   }
 }
