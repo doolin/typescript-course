@@ -7,9 +7,15 @@ interface UserProps {
 }
 
 export class User {
-  events: { [key: string]: Callback[] } = {};
+  static fromData(data: UserProps): User {
+    const user = new User(new Eventing());
+    user.set(data);
+    return user;
+  }
 
-  constructor(private data: UserProps) {}
+  private data: UserProps;
+
+  constructor(private events: Eventing) {}
 
   get(propName: string): string | number {
     return this.data[propName];
