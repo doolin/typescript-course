@@ -9,15 +9,3 @@ export class Attributes<T> {
     Object.assign(this.data, update);
   }
 }
-
-// strings can be types
-type BestName = 'stephen';
-
-const printName = (name: BestName): void => {
-  
-};
-
-// error
-printName('hglskdjfhgl');
-// no error
-printName('stephen');
