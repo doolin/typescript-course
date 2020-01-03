@@ -11,4 +11,4 @@ class Person {
 }
 
 const person = new Person('firstname', 'lastname');
-console.log(person.fullName;
+console.log(person.fullName);
