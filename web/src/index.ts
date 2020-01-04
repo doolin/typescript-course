@@ -2,13 +2,12 @@ import { User } from './models/User';
 
 const user = new User({ id: 1 })
 
-class Person {
-  constructor(public firstName: string, public lastName: string) {}
+const on = user.on; // returns reference to `on` from Eventing class
 
-  get fullName(): string {
-    return `${this.firstName} ${this.lastName}`;
-  }
-}
+on('change', () => {
+  console.log('user changed');
+});
 
-const person = new Person('firstname', 'lastname');
-console.log(person.fullName);
+user.on('change', () => {
+  console.log('directly from user');
+});
