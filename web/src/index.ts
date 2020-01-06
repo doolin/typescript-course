@@ -1,13 +1,16 @@
 import { User } from './models/User';
 
-const user = new User({ id: 1 })
+const user = new User({ name: 'new record', age: 0 })
 
-const on = user.on; // returns reference to `on` from Eventing class
+// console.log(user.get('name'));
 
-on('change', () => {
-  console.log('user changed');
-});
+// Reminder on how 'this' works in Javascript
 
-user.on('change', () => {
-  console.log('directly from user');
-});
+const colors {
+  color: 'red',
+  printColor () {
+    console.log(this.color);
+  }
+};
+
+colors.printColor();
