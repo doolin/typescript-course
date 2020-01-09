@@ -8,4 +8,4 @@ user.on('change', () => {
   console.log('change on');
 });
 
-user.trigger('change');
+user.set({ name: 'new change' });
