@@ -6,4 +6,4 @@ user.on('change', () => {
   console.log(user);
 });
 
-user.fetch();
+user.save();
