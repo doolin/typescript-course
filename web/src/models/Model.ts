@@ -1,5 +1,5 @@
-interface ModelAttributes {
-
+interface ModelAttributes<T> {
+  set(value: T): void;
 }
 
 interface Sync {
