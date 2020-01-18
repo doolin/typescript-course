@@ -1,3 +1,5 @@
+import { AxiosPromise } from "axios";
+
 interface ModelAttributes<T> {
   set(value: T): void;
   getAll(): T;
@@ -5,7 +7,8 @@ interface ModelAttributes<T> {
 }
 
 interface Sync {
-
+  fetch(id: number): AxiosPromise;
+  save(data: T): AxiosPromise;
 }
 
 interface Events {
