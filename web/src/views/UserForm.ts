@@ -26,6 +26,10 @@ export class UserForm {
 
     for (let eventKey in eventsMap) {
       const [eventName, selector] = eventKey.split(':');
+
+      fragment.querySelectorAll(selector).forEach(element => {
+        element.addEventListener(eventName, eventsMap[eventKey])
+      })
     }
   }
 
