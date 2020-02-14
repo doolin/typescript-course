@@ -3,8 +3,13 @@ export class UserForm {
 
   eventsMap(): { [key: string]: () => void } {
     return {
-      'click:button': this.onButtonClick
+      'click:button': this.onButtonClick,
+      'mouseenter:h1': this.onHeaderHover
     };
+  }
+
+  onHeaderHover(): void {
+    console.log('h1 hover');
   }
 
   onButtonClick(): void {
@@ -36,6 +41,8 @@ export class UserForm {
   render(): void {
     const templateElement = document.createElement('template');
     templateElement.innerHTML = this.template();
+
+    this.bindEvents(templateElement.content);
 
     this.parent.append(templateElement.content);
   }
