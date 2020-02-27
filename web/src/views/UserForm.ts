@@ -47,6 +47,8 @@ export class UserForm {
   }
 
   render(): void {
+    this.parent.innerHTML = '';
+
     const templateElement = document.createElement('template');
     templateElement.innerHTML = this.template();
 
