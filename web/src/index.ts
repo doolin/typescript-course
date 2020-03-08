@@ -8,7 +8,9 @@ const user = User.buildUser({
 
 const root = document.getElementById('root');
 if (root) {
+  console.log(root);
   const userEdit = new UserEdit(root, user);
+  console.log(userEdit);
   userEdit.render();
 
   console.log(userEdit);
