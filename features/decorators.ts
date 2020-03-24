@@ -1,5 +1,6 @@
 class Boat {
-  color: 'red';
+  //color: string = 'red';
+  color = 'red';
 
   get formattedColor(): string {
     return `This boat's color is ${this.color}`;
