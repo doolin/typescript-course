@@ -6,22 +6,31 @@ class Boat {
     return `This boat's color is ${this.color}`;
   }
 
-  @logError
+  @logError('boat was sunk')
   pilot(): void {
+    // This Error is just for demonstration purposes to illustrate
+    // how the decorator works.
+    throw new Error();
     console.log('swish');
   }
 }
 
-function logError(target: any, key: string, desc: PropertyDescriptor): void {
+function logError(errorMessage: string) {
+  return function (target: any, key: string, desc: PropertyDescriptor): void {
   const method = desc.value;
+
+  console.log(target);
+  console.log(key);
+  console.log(method);
 
   desc.value = function() {
     try {
       method();
     } catch(e) {
-      console.log('boat was sunk');
+      console.log(errorMessage);
     }
   }
+}
 }
 
 new Boat().pilot();
