@@ -68,3 +68,20 @@ router.get('/protected', requireAuth, (req: Request, res: Response) => {
 });
 
 export { router };
+
+// Dude says to not write anything out in a previous video,
+// then uses that code as a basis for the current video.
+// This won't work but I'm too pissed off to rewatch the entire
+// 8 minute video and type all the code out.
+
+function post(routeName) {
+  return function(target: any, key: string, desc: PropertyDescriptor) {
+    router.post(routeName, target[key]);
+  }
+}
+
+function use(middleware: any) {
+  return function(target: any, key: string, desc: PropertyDescriptor) {
+    
+  }
+}
