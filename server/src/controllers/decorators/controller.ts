@@ -13,7 +13,7 @@ export function controller(routePrefix: string) {
       const method: Methods = Reflect.getMetadata(MetadataKeys.method, target.prototype, key);
       const middlewares = Reflect.getMetadata(
           MetadataKeys.middleware,
-          target,
+          target.prototype,
           key
       ) || [];
 
