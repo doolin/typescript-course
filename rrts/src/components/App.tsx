@@ -2,11 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Todo, fetchTodos, deleteTodo } from '../actions';
 import { StoreState } from '../reducers';
-import { runInThisContext } from 'vm';
 
 interface AppProps {
   todos: Todo[];
-  fetchTodos: typeof fetchTodos;
+  fetchTodos: Function; // typeof fetchTodos;
   deleteTodo: typeof deleteTodo;
 }
 
@@ -50,5 +49,5 @@ const mapStateToProps = ({ todos }: StoreState): { todos: Todo[] } => {
 
 export const App = connect(
   mapStateToProps,
-  { fetchTodos }
+  { fetchTodos, deleteTodo }
 )(_App)
